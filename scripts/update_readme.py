@@ -4,7 +4,7 @@ import datetime
 USERNAME = "YOUR_LEETCODE_USERNAME"
 GITHUB = "YOUR_GITHUB_USERNAME"
 
-url = f"https://leetcode-stats-api.herokuapp.com/{USERNAME}"
+url = f"https://leetcode-stats-api.herokuapp.com/8AdxLDYG0y"
 data = requests.get(url).json()
 
 total = data.get("totalSolved", 0)
