@@ -77,7 +77,7 @@ for p in recent_problems:
 # 4. WRITE README
 # -------------------------------
 with open("README.md", "w") as f:
-    f.write("# 🚀 ULTRA++ LeetCode Dashboard\n\n")
+    f.write("# 🚀 LeetCode Dashboard\n\n")
 
     f.write(f"👤 Username: {USERNAME}\n")
     f.write(f"🏆 Ranking: {ranking}\n\n")
