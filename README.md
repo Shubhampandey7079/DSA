@@ -1,11 +1,18 @@
-# Daily DSA Challenge 💻
+# 🚀 LeetCode Dashboard
 
-Tracking my journey through competitive programming and technical interview prep.
+👤 Username: 8AdxLDYG0y
+🏆 Ranking: 5000001
 
-### 📅 Log
-- **Day 1:** Solved "Two Sum" on LeetCode (Arrays/Hash Maps).
-- **Day 2:** Implemented a Singly Linked List from scratch.
-- **Day 3:** Learned about Big O Notation and Time Complexity.
+✅ Total Solved: 6
 
-### 💡 Key Learnings
-> "Focus on the logic, not just the syntax."
+🟢 Easy: 5
+🟡 Medium: 1
+🔴 Hard: 0
+
+## 🔥 Stats Cards
+![Stats](https://github-readme-stats.vercel.app/api?username=Shubhampandey7079)
+
+## 📊 Heatmap
+![Heatmap](https://leetcard.jacoblin.cool/8AdxLDYG0y?ext=heatmap)
+
+⏱ Last Updated: 2026-04-11 18:42:38.676076
