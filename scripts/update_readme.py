@@ -87,31 +87,6 @@ with open("README.md", "w", encoding="utf-8") as f:
     f.write(f'<a href="https://github.com/{GITHUB}"><img src="https://img.shields.io/badge/GitHub-Shubham_Pandey-181717?style=for-the-badge&logo=github&logoColor=white"/></a> ')
     f.write(f'<img src="https://img.shields.io/badge/Ranking-#{str(ranking) if isinstance(ranking, int) else "N/A"}-2196F3?style=for-the-badge&logo=serverfault&logoColor=white"/>\n')
     f.write('</div>\n\n')
-
-    # ABOUT ME (With Blockquote styling)
-    f.write('> ### 🧑‍💻 About Me\n')
-    f.write('> - 🚀 Transforming lines of code into intelligent AI solutions.\n')
-    f.write('> - 🧠 Deep-diving into **Machine Learning** & **Data Structures**.\n')
-    f.write('> - 🎯 Target: SDE / AI Engineer at Top Product-Based Companies.\n')
-    f.write('> - ⚡ I don\'t count the days, I make the days count.\n\n')
-
-    # TECH STACK (Using sleek badges)
-    f.write('### ⚙️ Tech Arsenal\n\n')
-    f.write('<div align="center">\n')
-    # Languages
-    f.write('<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> ')
-    f.write('<img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"/> ')
-    # Frameworks & Tools
-    f.write('<img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/> ')
-    f.write('<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/> ')
-    f.write('<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/><br><br>\n')
-    # AI/ML
-    f.write('<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/> ')
-    f.write('<img src="https://img.shields.io/badge/scikit_learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white"/> ')
-    f.write('<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/> ')
-    f.write('<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>\n')
-    f.write('</div>\n\n')
-
     # DSA PROGRESS (Using progress-bar.dev for crisp visuals)
     f.write('### 📊 DSA Progress Tracker\n\n')
     f.write('| Difficulty | Progress | Count |\n')
