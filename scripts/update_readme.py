@@ -77,17 +77,14 @@ diff_counts = {"Easy": 0, "Medium": 0, "Hard": 0}
 for p in recent_problems:
     lang = p["lang"]
     diff = p["difficulty"]
-    
     lang_counts[lang] = lang_counts.get(lang, 0) + 1
     diff_counts[diff] = diff_counts.get(diff, 0) + 1
 
 # -------------------------------
-# 4. HELPER FUNCTIONS (FIXED VISUALS)
+# 4. HELPER FUNCTIONS (GITHUB SAFE)
 # -------------------------------
 def get_dynamic_badge(solved, goal, label):
-    """Creates a badge that changes color based on progress percentage"""
     percent = min((solved / goal) * 100, 100) if goal > 0 else 0
-    # FIX: Round to 1 decimal place to avoid 0.06666666% ugliness
     display_percent = f"{percent:.1f}" if percent > 0 else "0"
     
     if percent < 25: color = "red"
@@ -98,13 +95,8 @@ def get_dynamic_badge(solved, goal, label):
     return f'<img src="https://img.shields.io/badge/{label}-{solved}/{goal} ({display_percent}%)-{color}?style=for-the-badge&logo=leetcode" />'
 
 def get_skill_bar(solved, goal, color_hex):
-    """Creates an animated CSS skill bar"""
     percent = min((solved / goal) * 100, 100) if goal > 0 else 0
-    
-    # FIX: Ensure the bar is at least 2% wide so the gradient color is actually visible
     visual_width = max(percent, 2) if solved > 0 else 0
-    
-    # FIX: Clean up percentage text
     display_percent = f"{percent:.1f}" if percent > 0 else "0"
     
     return f'''
@@ -127,9 +119,9 @@ with open("README.md", "w") as f:
     f.write(f'<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=70A5FD&center=true&vCenter=true&width=600&lines=🚀+LeetCode+Dashboard;Solved+{total}+Problems+and+Counting...;Ranking:+{ranking}" alt="Typing SVG" /></a>\n')
     f.write('</div>\n\n')
 
-    # Glassmorphism Profile Card
+    # Glassmorphism Profile Card (FIXED: Removed backdrop-filter)
     f.write('<div align="center">\n')
-    f.write('  <div style="background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);">\n')
+    f.write('  <div style="background: #1e293b; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 16px; padding: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 8px 32px 0 rgba(0,0,0,0.5);">\n')
     f.write(f'    <h2 style="color: #ffffff; margin-bottom: 10px;">🎯 Target Progress</h2>\n')
     f.write(f'    {get_dynamic_badge(easy, 800, "Easy")}\n    <br><br>\n')
     f.write(f'    {get_dynamic_badge(medium, 1500, "Medium")}\n    <br><br>\n')
@@ -166,29 +158,32 @@ with open("README.md", "w") as f:
     f.write('</p>\n\n')
 
     # ---------------------------
-    # Recent Submissions (Modernized Table)
+    # Recent Submissions (FIXED: Converted from broken Table to pure HTML List)
     # ---------------------------
     f.write('<div align="center">\n')
     f.write('<h2>🕒 Recent Submissions</h2>\n')
     
-    f.write('<div style="background: rgba(30, 41, 59, 0.5); padding: 20px; border-radius: 12px; border: 1px solid #38bdf8; width: 100%; max-width: 700px; margin: 0 auto;">\n')
-    f.write('| # | Problem | Difficulty | Language |\n')
-    f.write('|:---:|---------|:----------:|:--------:|\n')
+    f.write('<div style="background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #38bdf8; width: 100%; max-width: 700px; margin: 0 auto;">\n')
 
     if recent_problems:
         for idx, p in enumerate(recent_problems, 1):
             diff_emoji = {"Easy": "🟢", "Medium": "🟡", "Hard": "🔴"}.get(p["difficulty"], "⚪")
-            f.write(f'| {idx} | <a href="{p["link"]}" style="color: #38bdf8; text-decoration: none;">{p["title"]}</a> | {diff_emoji} {p["difficulty"]} | <code>{p["lang"]}</code> |\n')
+            # Using pure HTML list layout to prevent GitHub markdown parser from breaking
+            f.write(f'<div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #334155;">\n')
+            f.write(f'  <span style="color: #8b949e; width: 30px;">{idx}.</span>\n')
+            f.write(f'  <a href="{p["link"]}" style="color: #38bdf8; text-decoration: none; flex-grow: 1; text-align: left; margin-left: 10px;">{p["title"]}</a>\n')
+            f.write(f'  <span style="margin: 0 15px;">{diff_emoji} {p["difficulty"]}</span>\n')
+            f.write(f'  <code style="background: #0d1117; padding: 4px 8px; border-radius: 4px; color: #c9d1d9;">{p["lang"]}</code>\n')
+            f.write(f'</div>\n')
     else:
-        f.write('| 1 | <i>No recent submissions yet</i> | - | - |\n')
+        f.write('<p style="color: #8b949e; text-align: center; margin: 0;"><i>No recent submissions yet. Start solving to see them here!</i></p>\n')
 
     f.write('</div>\n')
     f.write('</div>\n\n')
 
     # ---------------------------
-    # Recent Analytics (FIX: HIDDEN IF EMPTY)
+    # Recent Analytics (Only shows if data exists)
     # ---------------------------
-    # Only draw this section if the user actually has recent submissions
     if recent_problems:
         f.write('<div align="center">\n')
         f.write('<h2>🧠 Recent Analytics</h2>\n')
@@ -201,9 +196,8 @@ with open("README.md", "w") as f:
         f.write('</div>\n\n')
 
     # ---------------------------
-    # Footer (FIXED 2026 DATE BUG)
+    # Footer
     # ---------------------------
-    # FIX: Explicitly format as Year-Month-Day to prevent system clock bugs
     current_time = datetime.datetime.utcnow().strftime("%b %d, %Y at %H:%M UTC")
     
     f.write('<div align="center">\n')
