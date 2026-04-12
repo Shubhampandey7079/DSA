@@ -1,30 +1,42 @@
-# 🚀 LeetCode Dashboard
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2500&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=🚀+LeetCode+Dashboard;6+Problems+Solved;Keep+Grinding+🔥;Ranking:+5000001" />
+</div>
 
-👤 Username: **8AdxLDYG0y**
+<div align="center">
+<img src="https://img.shields.io/badge/Total_Solved-6-blue?style=for-the-badge&logo=leetcode"/>
+<img src="https://img.shields.io/badge/Easy-5-success?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Medium-1-yellow?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Hard-0-red?style=for-the-badge"/>
+</div>
 
-🏆 Total Solved: **6**
+## 🎯 Progress Tracker
 
-📊 Ranking: **5000001**
+**Easy**   → 2% ░░░░░░░░░░ (5/200)
 
-## 🎯 Progress
+**Medium** → 0% ░░░░░░░░░░ (1/500)
 
-Easy   : 2% [░░░░░░░░░░] (5/200)
+**Hard**   → 0% ░░░░░░░░░░ (0/150)
 
-Medium : 0% [░░░░░░░░░░] (1/500)
+## 📊 LeetCode Stats
 
-Hard   : 0% [░░░░░░░░░░] (0/150)
+<div align="center">
+<img src="https://leetcard.jacoblin.cool/8AdxLDYG0y?theme=dark&ext=heatmap" width="80%"/>
+</div>
 
-## 📈 LeetCode Stats
+## 🔥 GitHub Insights
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/8AdxLDYG0y?theme=dark&ext=heatmap)
+<div align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=Shubhampandey7079&show_icons=true&theme=tokyonight" height="180"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubhampandey7079&layout=compact&theme=tokyonight" height="180"/>
+</div>
 
-## 🔥 GitHub Stats
+<div align="center">
+<img src="https://streak-stats.demolab.com?user=Shubhampandey7079&theme=tokyonight"/>
+</div>
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shubhampandey7079&show_icons=true&theme=tokyonight)
+## 📈 Contribution Graph
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shubhampandey7079&layout=compact&theme=tokyonight)
-
-![Streak](https://streak-stats.demolab.com?user=Shubhampandey7079&theme=tokyonight)
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubhampandey7079&theme=tokyo-night" width="100%"/>
 
 ## 🕒 Recent Submissions
 
@@ -33,4 +45,4 @@ Hard   : 0% [░░░░░░░░░░] (0/150)
 | 1 | No recent submissions | - | - |
 
 ---
-⏱ Updated: Apr 12, 2026 17:39 UTC
+⏱ Updated: Apr 12, 2026 17:41 UTC
