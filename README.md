@@ -1,61 +1,70 @@
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=36&duration=2500&pause=800&color=00F7FF&center=true&vCenter=true&width=900&lines=Hi+I%27m+Shubham+🚀;AI+Engineer+in+Making;6+LeetCode+Problems+Solved;Never+Stop+Grinding+🔥" />
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&duration=2500&pause=1000&color=00F7FF&center=true&vCenter=true&random=false&width=900&lines=Hi+%F0%9F%91%8B+I%27m+Shubham+Pandey;Aspiring+AI+Engineer+%F0%9F%A4%96;DSA+Grinder+%7C+%F0%9F%94%A5+Problems+Solved%3A+6;Consistency+is+the+Key+%E2%9A%A1" alt="Typing SVG" /></a>
 </div>
 
 <div align="center">
-<img src="https://img.shields.io/badge/LeetCode-6_Solved-orange?style=for-the-badge&logo=leetcode"/>
-<img src="https://img.shields.io/badge/GitHub-Shubhampandey7079-black?style=for-the-badge&logo=github"/>
+<a href="https://leetcode.com/8AdxLDYG0y/"><img src="https://img.shields.io/badge/LeetCode-6_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a> <a href="https://github.com/Shubhampandey7079"><img src="https://img.shields.io/badge/GitHub-Shubham_Pandey-181717?style=for-the-badge&logo=github&logoColor=white"/></a> <img src="https://img.shields.io/badge/Ranking-#5000001-2196F3?style=for-the-badge&logo=serverfault&logoColor=white"/>
 </div>
 
-## 🧑‍💻 About Me
+> ### 🧑‍💻 About Me
+> - 🚀 Transforming lines of code into intelligent AI solutions.
+> - 🧠 Deep-diving into **Machine Learning** & **Data Structures**.
+> - 🎯 Target: SDE / AI Engineer at Top Product-Based Companies.
+> - ⚡ I don't count the days, I make the days count.
 
-- 🚀 Aspiring **AI Engineer**
-- 🧠 Focused on **DSA + Machine Learning**
-- 🎯 Goal: Crack FAANG / Top Tech
-- ⚡ Consistency > Motivation
+### ⚙️ Tech Arsenal
 
-## ⚙️ Tech Stack
+<div align="center">
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"/> <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/><br><br>
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/> <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white"/> <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/> <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
+</div>
 
-- 💻 Languages: Python, C++
-- 📊 DSA & Problem Solving
-- 🤖 AI / ML (Learning Phase)
-- 📱 Flutter Development
+### 📊 DSA Progress Tracker
 
-## 📊 DSA Progress
+| Difficulty | Progress | Count |
+|:-----------|:--------:|:-----:|
+| 🟢 Easy   | ![2%](https://progress-bar.dev/2/?width=400&color=2ECC71) | 5/200 |
+| 🟡 Medium | ![0%](https://progress-bar.dev/0/?width=400&color=F1C40F) | 1/500 |
+| 🔴 Hard   | ![0%](https://progress-bar.dev/0/?width=400&color=E74C3C) | 0/150 |
 
-🟢 Easy   → 2% ░░░░░░░░░░ (5/200)
+<div align="center">
+### 🧠 LeetCode Analytics
+<img src="https://leetcard.jacoblin.cool/8AdxLDYG0y?theme=dark&ext=heatmap&font=JetBrains%20Mono" width="600"/>
+</div>
 
-🟡 Medium → 0% ░░░░░░░░░░ (1/500)
+<div align="center">
+### 📈 GitHub Metrics
+<img src="https://github-readme-stats.vercel.app/api?username=Shubhampandey7079&show_icons=true&theme=tokyonight&hide_border=true&ring_color=00F7FF&icon_color=00F7FF&title_color=C084FC" height="170"/> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubhampandey7079&layout=compact&theme=tokyonight&hide_border=true&title_color=C084FC&text_color=FFFFFF" height="170"/>
 
-🔴 Hard   → 0% ░░░░░░░░░░ (0/150)
+<img src="https://streak-stats.demolab.com?user=Shubhampandey7079&theme=tokyonight&hide_border=true&ring=00F7FF&fire=FF6B6B&currStreakLabel=C084FC"/>
+</div>
 
-## 🧠 LeetCode Analytics
+<div align="center">
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubhampandey7079&bg_color=0D1117&color=C084FC&line=00F7FF&point=FFFFFF&area=true&hide_border=true" width="100%"/>
+</div>
 
-<img src="https://leetcard.jacoblin.cool/8AdxLDYG0y?theme=dark&ext=heatmap" width="100%"/>
+### 🕒 Recent LeetCode Submissions
 
-## 📈 GitHub Stats
+<table align="center">
+<thead>
+  <tr>
+    <th>#</th>
+    <th>Problem</th>
+    <th>Difficulty</th>
+    <th>Language</th>
+  </tr>
+</thead>
+<tbody>
+  <tr><td colspan="4" align="center">No recent submissions found</td></tr>
+</tbody>
+</table>
 
-<img src="https://github-readme-stats.vercel.app/api?username=Shubhampandey7079&show_icons=true&theme=tokyonight" height="170"/><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubhampandey7079&layout=compact&theme=tokyonight" height="170"/>
+<div align="center">
+### 🌐 Let's Connect
+<a href="https://github.com/Shubhampandey7079"><img src="https://img.shields.io/badge/GitHub-Follow_me-181717?style=for-the-badge&logo=github"/></a> <a href="mailto:Shubhampandey707906@gmail.com"><img src="https://img.shields.io/badge/Email-Drop_a_Hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+</div>
 
-<img src="https://streak-stats.demolab.com?user=Shubhampandey7079&theme=tokyonight"/>
-
-## 📊 Contribution Graph
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubhampandey7079&theme=tokyo-night" width="100%"/>
-
-## 🕒 Recent Submissions
-
-| # | Problem | Difficulty | Language |
-|---|---------|------------|----------|
-| 1 | No recent submissions | - | - |
-
-## 🌐 Connect With Me
-
-- 💼 GitHub: https://github.com/Shubhampandey7079
-- 📧 Email: Shubhampandey707906@gmail.com
-
-🚀 *Open for opportunities & collaborations*
-
-
+<div align="center">
 ---
-✨ Last Updated: Apr 12, 2026 17:48 UTC
+<sub>✨ Profile last synced on: <b>Apr 12, 2026 18:20 UTC</b></sub>
+</div>
