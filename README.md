@@ -1,40 +1,45 @@
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2500&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=🚀+LeetCode+Dashboard;6+Problems+Solved;Keep+Grinding+🔥;Ranking:+5000001" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=36&duration=2500&pause=800&color=00F7FF&center=true&vCenter=true&width=900&lines=Hi+I%27m+Shubham+🚀;AI+Engineer+in+Making;6+LeetCode+Problems+Solved;Never+Stop+Grinding+🔥" />
 </div>
 
 <div align="center">
-<img src="https://img.shields.io/badge/Total_Solved-6-blue?style=for-the-badge&logo=leetcode"/>
-<img src="https://img.shields.io/badge/Easy-5-success?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Medium-1-yellow?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Hard-0-red?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/LeetCode-6_Solved-orange?style=for-the-badge&logo=leetcode"/>
+<img src="https://img.shields.io/badge/GitHub-Shubhampandey7079-black?style=for-the-badge&logo=github"/>
 </div>
 
-## 🎯 Progress Tracker
+## 🧑‍💻 About Me
 
-**Easy**   → 2% ░░░░░░░░░░ (5/200)
+- 🚀 Aspiring **AI Engineer**
+- 🧠 Focused on **DSA + Machine Learning**
+- 🎯 Goal: Crack FAANG / Top Tech
+- ⚡ Consistency > Motivation
 
-**Medium** → 0% ░░░░░░░░░░ (1/500)
+## ⚙️ Tech Stack
 
-**Hard**   → 0% ░░░░░░░░░░ (0/150)
+- 💻 Languages: Python, C++
+- 📊 DSA & Problem Solving
+- 🤖 AI / ML (Learning Phase)
+- 📱 Flutter Development
 
-## 📊 LeetCode Stats
+## 📊 DSA Progress
 
-<div align="center">
-<img src="https://leetcard.jacoblin.cool/8AdxLDYG0y?theme=dark&ext=heatmap" width="80%"/>
-</div>
+🟢 Easy   → 2% ░░░░░░░░░░ (5/200)
 
-## 🔥 GitHub Insights
+🟡 Medium → 0% ░░░░░░░░░░ (1/500)
 
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Shubhampandey7079&show_icons=true&theme=tokyonight" height="180"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubhampandey7079&layout=compact&theme=tokyonight" height="180"/>
-</div>
+🔴 Hard   → 0% ░░░░░░░░░░ (0/150)
 
-<div align="center">
+## 🧠 LeetCode Analytics
+
+<img src="https://leetcard.jacoblin.cool/8AdxLDYG0y?theme=dark&ext=heatmap" width="100%"/>
+
+## 📈 GitHub Stats
+
+<img src="https://github-readme-stats.vercel.app/api?username=Shubhampandey7079&show_icons=true&theme=tokyonight" height="170"/><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubhampandey7079&layout=compact&theme=tokyonight" height="170"/>
+
 <img src="https://streak-stats.demolab.com?user=Shubhampandey7079&theme=tokyonight"/>
-</div>
 
-## 📈 Contribution Graph
+## 📊 Contribution Graph
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shubhampandey7079&theme=tokyo-night" width="100%"/>
 
@@ -44,5 +49,13 @@
 |---|---------|------------|----------|
 | 1 | No recent submissions | - | - |
 
+## 🌐 Connect With Me
+
+- 💼 GitHub: https://github.com/Shubhampandey7079
+- 📧 Email: Shubhampandey707906@gmail.com
+
+🚀 *Open for opportunities & collaborations*
+
+
 ---
-⏱ Updated: Apr 12, 2026 17:45 UTC
+✨ Last Updated: Apr 12, 2026 17:48 UTC
