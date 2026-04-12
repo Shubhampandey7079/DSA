@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <div style="background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);">
+  <div style="background: #1e293b; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 16px; padding: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 8px 32px 0 rgba(0,0,0,0.5);">
     <h2 style="color: #ffffff; margin-bottom: 10px;">🎯 Target Progress</h2>
     <img src="https://img.shields.io/badge/Easy-5/800 (0.6%)-red?style=for-the-badge&logo=leetcode" />
     <br><br>
@@ -62,14 +62,12 @@
 
 <div align="center">
 <h2>🕒 Recent Submissions</h2>
-<div style="background: rgba(30, 41, 59, 0.5); padding: 20px; border-radius: 12px; border: 1px solid #38bdf8; width: 100%; max-width: 700px; margin: 0 auto;">
-| # | Problem | Difficulty | Language |
-|:---:|---------|:----------:|:--------:|
-| 1 | <i>No recent submissions yet</i> | - | - |
+<div style="background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #38bdf8; width: 100%; max-width: 700px; margin: 0 auto;">
+<p style="color: #8b949e; text-align: center; margin: 0;"><i>No recent submissions yet. Start solving to see them here!</i></p>
 </div>
 </div>
 
 <div align="center">
 <hr style="border-color: #38bdf8; width: 50%; border-width: 2px;">
-<i style="color: #8b949e;">⏱ Auto-updated: Apr 12, 2026 at 17:26 UTC | Built with ❤️ by <a href="https://github.com/Shubhampandey7079" style="color: #70a5fd;">Shubhampandey7079</a></i>
+<i style="color: #8b949e;">⏱ Auto-updated: Apr 12, 2026 at 17:30 UTC | Built with ❤️ by <a href="https://github.com/Shubhampandey7079" style="color: #70a5fd;">Shubhampandey7079</a></i>
 </div>
