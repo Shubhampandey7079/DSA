@@ -5,14 +5,14 @@ USERNAME = "8AdxLDYG0y"
 GITHUB = "Shubhampandey7079"
 
 # -------------------------------
-# 1. BASIC STATS API
+# 1. BASIC STATS
 # -------------------------------
 stats_url = f"https://leetcode-api-faisalshohag.vercel.app/{USERNAME}"
 
 try:
     res = requests.get(stats_url, timeout=10)
     stats = res.json() if res.status_code == 200 else {}
-except Exception:
+except:
     stats = {}
 
 total = stats.get("totalSolved", 0)
@@ -40,13 +40,13 @@ query = {
     "variables": {"username": USERNAME, "limit": 5}
 }
 
-recent_problems = []
-
 headers = {
     "Content-Type": "application/json",
     "Referer": "https://leetcode.com/",
     "User-Agent": "Mozilla/5.0"
 }
+
+recent_problems = []
 
 try:
     res = requests.post(recent_url, json=query, headers=headers, timeout=10)
@@ -60,7 +60,7 @@ try:
             "difficulty": p["difficulty"],
             "lang": p["lang"]
         })
-except Exception:
+except:
     recent_problems = []
 
 # -------------------------------
@@ -77,8 +77,7 @@ for p in recent_problems:
 # 4. UI HELPERS
 # -------------------------------
 def get_dynamic_badge(solved, goal, label):
-    percent = (solved / goal) * 100 if goal > 0 else 0
-    percent = round(percent, 1)
+    percent = round((solved / goal) * 100, 1) if goal > 0 else 0
 
     if percent < 25:
         color = "red"
@@ -93,10 +92,7 @@ def get_dynamic_badge(solved, goal, label):
 
 
 def get_skill_bar(solved, goal, color):
-    percent = (solved / goal) * 100 if goal > 0 else 0
-    percent = round(percent, 1)
-
-    # Minimum visible bar
+    percent = round((solved / goal) * 100, 1) if goal > 0 else 0
     visual_width = percent if percent >= 3 else (3 if solved > 0 else 0)
 
     return f"""
@@ -162,10 +158,8 @@ with open("README.md", "w", encoding="utf-8") as f:
     # ANALYTICS
     if recent_problems:
         f.write('\n## 🧠 Recent Analytics\n\n')
-
         for lang, count in lang_counts.items():
             f.write(f"- {lang}: {count}\n")
-
         for diff, count in diff_counts.items():
             if count > 0:
                 f.write(f"- {diff}: {count}\n")
