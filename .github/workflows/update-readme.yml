@@ -2,9 +2,8 @@ name: 🚀 Ultra Pro README
 
 on:
   schedule:
-    # Runs every 6 hours
-    - cron: "0 */6 * * *"
-  workflow_dispatch: # Allows manual triggering from GitHub UI
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:
   push:
     branches: ["main"]
 
@@ -16,23 +15,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: 📥 Checkout Repo
+        uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.11" # Pinned to a specific version for consistency
-          cache: 'pip' # ⚡ Speeds up workflow by caching installed packages
+          python-version: "3.11"
+          cache: "pip"
 
-      - name: Install deps
-        run: pip install -r requirements.txt # ⚡ Best practice: use a requirements file
+      - name: 📦 Install Dependencies
+        run: pip install -r requirements.txt
 
-      - name: Run script
+      - name: ⚙️ Run Script
         run: python scripts/update_readme.py
 
-      - name: Commit & Push
-        uses: stefanzweifel/git-auto-commit-action@v5 # ⚡ Industry standard for auto-committing
+      # 🔥 IMPORTANT FIX: only commit if changes exist
+      - name: 🚀 Commit & Push (only if changed)
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🚀 Ultra update [skip ci]"
+          commit_message: "🚀 Auto update README"
           file_pattern: README.md
+          commit_user_name: github-actions[bot]
+          commit_user_email: github-actions[bot]@users.noreply.github.com
+          skip_dirty_check: false
