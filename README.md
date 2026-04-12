@@ -1,26 +1,26 @@
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=70A5FD&center=true&vCenter=true&width=600&lines=🚀+LeetCode+Dashboard;Solved+6+Problems;Ranking:+5000001" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=70A5FD&center=true&vCenter=true&width=600&lines=🚀+LeetCode+Dashboard;Solved+0+Problems;Ranking:+N/A" />
 </div>
 
 <h2 align="center">🎯 Target Progress</h2>
 <div align="center">
-<img src="https://img.shields.io/badge/Easy-5/200 (2.5%)-red?style=for-the-badge&logo=leetcode" /><br><br>
-<img src="https://img.shields.io/badge/Medium-1/500 (0.2%)-red?style=for-the-badge&logo=leetcode" /><br><br>
+<img src="https://img.shields.io/badge/Easy-0/200 (0.0%)-red?style=for-the-badge&logo=leetcode" /><br><br>
+<img src="https://img.shields.io/badge/Medium-0/500 (0.0%)-red?style=for-the-badge&logo=leetcode" /><br><br>
 <img src="https://img.shields.io/badge/Hard-0/150 (0.0%)-red?style=for-the-badge&logo=leetcode" />
 </div>
 
 
     <div align="center">
-        <p><b>2.5%</b></p>
+        <p><b>0.0%</b></p>
         <div style="width:90%;max-width:400px;height:10px;background:#1a1b27;border-radius:10px;border:1px solid #2f3542;">
-            <div style="width:3%;height:100%;background:linear-gradient(90deg,#00b894,#ffffff);border-radius:10px;"></div>
+            <div style="width:0%;height:100%;background:linear-gradient(90deg,#00b894,#ffffff);border-radius:10px;"></div>
         </div>
     </div><br>
     
     <div align="center">
-        <p><b>0.2%</b></p>
+        <p><b>0.0%</b></p>
         <div style="width:90%;max-width:400px;height:10px;background:#1a1b27;border-radius:10px;border:1px solid #2f3542;">
-            <div style="width:3%;height:100%;background:linear-gradient(90deg,#fdcb6e,#ffffff);border-radius:10px;"></div>
+            <div style="width:0%;height:100%;background:linear-gradient(90deg,#fdcb6e,#ffffff);border-radius:10px;"></div>
         </div>
     </div><br>
     
@@ -53,4 +53,4 @@
 
 
 ---
-⏱ Updated: Apr 12, 2026 17:21 UTC
+⏱ Updated: Apr 12, 2026 17:24 UTC
