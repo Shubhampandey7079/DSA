@@ -44,7 +44,6 @@ query = {
 
 recent_problems = []
 
-# Headers are REQUIRED, otherwise LeetCode blocks the script as a bot
 headers = {
     "Content-Type": "application/json",
     "User-Agent": "Mozilla/5.0",
@@ -57,7 +56,6 @@ try:
     recent = data.get("data", {}).get("recentAcSubmissionList", [])
 
     for p in recent:
-        # Create clickable markdown links
         title = p["title"]
         slug = p["titleSlug"]
         link = f"https://leetcode.com/problems/{slug}/"
@@ -73,7 +71,6 @@ except Exception:
 # -------------------------------
 # 3. ACCURATE RECENT ANALYTICS
 # -------------------------------
-# Instead of guessing topics from titles, track actual Language & Difficulty stats
 lang_counts = {}
 diff_counts = {"Easy": 0, "Medium": 0, "Hard": 0}
 
@@ -85,90 +82,119 @@ for p in recent_problems:
     diff_counts[diff] = diff_counts.get(diff, 0) + 1
 
 # -------------------------------
-# 4. WRITE README
+# 4. HELPER FUNCTIONS FOR VISUALS
+# -------------------------------
+def get_dynamic_badge(solved, goal, label):
+    """Creates a badge that changes color based on progress percentage"""
+    percent = min((solved / goal) * 100, 100) if goal > 0 else 0
+    if percent < 25: color = "red"
+    elif percent < 50: color = "yellow"
+    elif percent < 75: color = "green"
+    else: color = "brightgreen"
+    
+    return f'<img src="https://img.shields.io/badge/{label}-{solved}/{goal} ({percent:.0f}%)-{color}?style=for-the-badge&logo=leetcode" />'
+
+def get_skill_bar(solved, goal, color_hex):
+    """Creates an animated CSS skill bar"""
+    percent = min((solved / goal) * 100, 100) if goal > 0 else 0
+    return f'''
+    <div align="center">
+        <code>██████████</code>&nbsp;{percent:.0f}%
+        <br><br>
+        <div style="width: 100%; max-width: 400px; height: 12px; background: #1a1b27; border-radius: 6px; overflow: hidden; border: 1px solid #38bdf8;">
+            <div style="width: {percent}%; height: 100%; background: linear-gradient(90deg, {color_hex}, #ffffff); border-radius: 6px;"></div>
+        </div>
+        <br>
+    </div>'''
+
+# -------------------------------
+# 5. WRITE README
 # -------------------------------
 with open("README.md", "w") as f:
     
-    # Header & Badges
-    f.write('<h1 align="center">🚀 LeetCode Dashboard</h1>\n\n')
-    f.write('<p align="center">\n')
-    f.write(f'  <img src="https://img.shields.io/badge/Username-{USERNAME}-orange?style=for-the-badge&logo=leetcode" />\n')
-    f.write(f'  <img src="https://img.shields.io/badge/Ranking-{ranking}-blue?style=for-the-badge" />\n')
-    f.write(f'  <img src="https://img.shields.io/badge/Total_Solved-{total}-green?style=for-the-badge" />\n')
-    f.write(f'  <img src="https://img.shields.io/badge/Acceptance-{acceptance}%25-brightgreen?style=for-the-badge" />\n')
-    f.write('</p>\n\n')
+    # Typing SVG Header
+    f.write('<div align="center">\n')
+    f.write(f'<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=70A5FD&center=true&vCenter=true&width=600&lines=🚀+LeetCode+Dashboard;Solved+{total}+Problems+and+Counting...;Ranking:+{ranking}" alt="Typing SVG" /></a>\n')
+    f.write('</div>\n\n')
 
-    # Auto-update trigger (Visible only if run via GitHub Actions)
-    f.write('<details>\n<summary>⚡ Automation Info</summary>\n\n')
-    f.write(f'_⏱ Dashboard auto-updated on: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")}_\n\n')
-    f.write('</details>\n\n')
+    # Glassmorphism Profile Card
+    f.write('<div align="center">\n')
+    f.write('  <div style="background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);">\n')
+    f.write(f'    <h2 style="color: #ffffff; margin-bottom: 10px;">🎯 Target Progress</h2>\n')
+    f.write(f'    {get_dynamic_badge(easy, 800, "Easy")}\n    <br><br>\n')
+    f.write(f'    {get_dynamic_badge(medium, 1500, "Medium")}\n    <br><br>\n')
+    f.write(f'    {get_dynamic_badge(hard, 500, "Hard")}\n')
+    f.write('  </div>\n')
+    f.write('</div>\n\n')
+    
+    # Animated Skill Bars
+    f.write(f'{get_skill_bar(easy, 800, "#00b8a3")} \n')
+    f.write(f'{get_skill_bar(medium, 1500, "#ffc01e")} \n')
+    f.write(f'{get_skill_bar(hard, 500, "#ff375f")} \n')
+
+    f.write('<br><br>\n')
 
     # ---------------------------
-    # UI Cards (Moved to top for better visual hierarchy)
+    # LeetCode Heatmap & Stats Cards
     # ---------------------------
-    f.write('## 🔥 GitHub Stats\n\n')
+    f.write('<div align="center">\n')
+    f.write(f'  <img src="https://leetcard.jacoblin.cool/{USERNAME}?ext=heatmap&theme=dark&font=Lato&radius=10" />\n')
+    f.write('</div>\n\n')
+
+    f.write('## 🔥 GitHub Vibe Check\n\n')
     f.write('<p align="center">\n')
-    f.write(f'  <img src="https://github-readme-stats.vercel.app/api?username={GITHUB}&show_icons=true&theme=tokyonight&hide_border=true" height="180"/>\n')
-    f.write(f'  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={GITHUB}&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="180"/>\n')
+    f.write(f'  <img src="https://github-readme-stats.vercel.app/api?username={GITHUB}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=70a5fd&icon_color=38bdf8" height="180"/>\n')
+    f.write(f'  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={GITHUB}&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=70a5fd&text_color=c9d1d9" height="180"/>\n')
     f.write('</p>\n\n')
     
     f.write('<p align="center">\n')
-    f.write(f'  <img src="https://streak-stats.demolab.com/?user={GITHUB}&theme=tokyonight&hide_border=true" />\n')
+    f.write(f'  <a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img src="https://github-readme-activity-graph.vercel.app/graph?username={GITHUB}&bg_color=0d1117&color=70a5fd&line=38bdf8&point=38bdf8&area=true&hide_border=true&radius=8" width="100%"/></a>\n')
     f.write('</p>\n\n')
 
     f.write('<p align="center">\n')
-    f.write(f'  <img src="https://github-readme-activity-graph.vercel.app/graph?username={GITHUB}&bg_color=1a1b27&color=70a5fd&line=38bdf8&point=38bdf8&area=true&hide_border=true" />\n')
+    f.write(f'  <img src="https://streak-stats.demolab.com?user={GITHUB}&theme=tokyonight&hide_border=true&background=0d1117&ring=38bdf8&fire=ff375f&currStreakLabel=70a5fd" />\n')
     f.write('</p>\n\n')
 
     # ---------------------------
-    # LeetCode Progress
+    # Recent Submissions (Modernized Table)
     # ---------------------------
-    f.write('## 📊 LeetCode Progress\n\n')
+    f.write('<div align="center">\n')
+    f.write('<h2>🕒 Recent Submissions</h2>\n')
     
-    # Custom Progress Bars using HTML/CSS
-    def progress_bar(solved, total_out_of, color):
-        percent = (solved / total_out_of) * 100 if total_out_of > 0 else 0
-        return f'<img src="https://img.shields.io/badge/{solved}/{total_out_of}-{color}?style=flat-square" />'
-
-    # Note: You can adjust the "/X" numbers to your actual goal (e.g., 500/800 Easy)
-    f.write(f'- 🟢 Easy: {progress_bar(easy, 800, "success")}\n')
-    f.write(f'- 🟡 Medium: {progress_bar(medium, 1500, "yellow")}\n')
-    f.write(f'- 🔴 Hard: {progress_bar(hard, 500, "critical")}\n\n')
-
-    f.write(f'![Heatmap](https://leetcard.jacoblin.cool/{USERNAME}?ext=heatmap&theme=dark&font=Lato)\n\n')
-
-    # ---------------------------
-    # Recent Problems (Clickable & Clean)
-    # ---------------------------
-    f.write('## 🕒 Recent Submissions\n\n')
+    # Slightly transparent table wrapper
+    f.write('<div style="background: rgba(30, 41, 59, 0.5); padding: 20px; border-radius: 12px; border: 1px solid #38bdf8; width: 100%; max-width: 700px; margin: 0 auto;">\n')
     f.write('| # | Problem | Difficulty | Language |\n')
     f.write('|:---:|---------|:----------:|:--------:|\n')
 
     if recent_problems:
         for idx, p in enumerate(recent_problems, 1):
-            # Add emojis based on difficulty for visual pop
             diff_emoji = {"Easy": "🟢", "Medium": "🟡", "Hard": "🔴"}.get(p["difficulty"], "⚪")
-            f.write(f'| {idx} | [{p["title"]}]({p["link"]}) | {diff_emoji} {p["difficulty"]} | `{p["lang"]}` |\n')
+            f.write(f'| {idx} | <a href="{p["link"]}" style="color: #38bdf8; text-decoration: none;">{p["title"]}</a> | {diff_emoji} {p["difficulty"]} | <code>{p["lang"]}</code> |\n')
     else:
-        f.write('| 1 | _No recent submissions found_ | - | - |\n')
+        f.write('| 1 | _No recent submissions_ | - | - |\n')
 
-    f.write('\n')
+    f.write('</div>\n')
+    f.write('</div>\n\n')
 
     # ---------------------------
-    # Recent Analytics (Accurate Data)
+    # Recent Analytics (Pill Badges)
     # ---------------------------
-    f.write('## 🧠 Recent Analytics (Last 5 Solves)\n\n')
+    f.write('<div align="center">\n')
+    f.write('<h2>🧠 Recent Analytics</h2>\n')
     
-    f.write('**Language Distribution:**\n')
-    for lang, count in lang_counts.items():
-        f.write(f'- `{lang}`: {count} solve{"s" if count > 1 else ""}\n')
-        
-    f.write('\n**Difficulty Breakdown:**\n')
-    for diff, count in diff_counts.items():
-        if count > 0:
-            f.write(f'- {diff}: {count} solve{"s" if count > 1 else ""}\n')
-            
-    f.write('\n---\n')
-    f.write(f'<p align="center"><i>Built with ❤️ by <a href="https://github.com/{GITHUB}">{GITHUB}</a></i></p>\n')
+    lang_badges = " ".join([f'<img src="https://img.shields.io/badge/{lang}-{count}_solve{"s" if count > 1 else ""}-blue?style=flat-square" />' for lang, count in lang_counts.items()])
+    diff_badges = " ".join([f'<img src="https://img.shields.io/badge/{diff}-{count}_solve{"s" if count > 1 else ""}-{color}?style=flat-square" />' for diff, count, color in [("Easy", diff_counts.get("Easy",0), "success"), ("Medium", diff_counts.get("Medium",0), "yellow"), ("Hard", diff_counts.get("Hard",0), "critical")] if count > 0])
 
-print("✅ README.md generated successfully!")
+    f.write(f'{lang_badges}  \n\n')
+    f.write(f'{diff_badges}\n')
+    f.write('</div>\n\n')
+
+    # ---------------------------
+    # Footer
+    # ---------------------------
+    f.write('<div align="center">\n')
+    f.write('<hr style="border-color: #38bdf8; width: 50%; border-width: 2px;">\n')
+    f.write(f'<i style="color: #8b949e;">⏱ Auto-updated: {datetime.datetime.now().strftime("%b %d, %Y at %H:%M UTC")} | Built with ❤️ by <a href="https://github.com/{GITHUB}" style="color: #70a5fd;">{GITHUB}</a></i>\n')
+    f.write('</div>\n')
+
+print("✅ Ultra-attractive README.md generated successfully!")
