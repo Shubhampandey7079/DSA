@@ -82,27 +82,37 @@ for p in recent_problems:
     diff_counts[diff] = diff_counts.get(diff, 0) + 1
 
 # -------------------------------
-# 4. HELPER FUNCTIONS FOR VISUALS
+# 4. HELPER FUNCTIONS (FIXED VISUALS)
 # -------------------------------
 def get_dynamic_badge(solved, goal, label):
     """Creates a badge that changes color based on progress percentage"""
     percent = min((solved / goal) * 100, 100) if goal > 0 else 0
+    # FIX: Round to 1 decimal place to avoid 0.06666666% ugliness
+    display_percent = f"{percent:.1f}" if percent > 0 else "0"
+    
     if percent < 25: color = "red"
     elif percent < 50: color = "yellow"
     elif percent < 75: color = "green"
     else: color = "brightgreen"
     
-    return f'<img src="https://img.shields.io/badge/{label}-{solved}/{goal} ({percent:.0f}%)-{color}?style=for-the-badge&logo=leetcode" />'
+    return f'<img src="https://img.shields.io/badge/{label}-{solved}/{goal} ({display_percent}%)-{color}?style=for-the-badge&logo=leetcode" />'
 
 def get_skill_bar(solved, goal, color_hex):
     """Creates an animated CSS skill bar"""
     percent = min((solved / goal) * 100, 100) if goal > 0 else 0
+    
+    # FIX: Ensure the bar is at least 2% wide so the gradient color is actually visible
+    visual_width = max(percent, 2) if solved > 0 else 0
+    
+    # FIX: Clean up percentage text
+    display_percent = f"{percent:.1f}" if percent > 0 else "0"
+    
     return f'''
     <div align="center">
-        <code>██████████</code>&nbsp;{percent:.0f}%
+        <code>██████████</code>&nbsp;{display_percent}%
         <br><br>
         <div style="width: 100%; max-width: 400px; height: 12px; background: #1a1b27; border-radius: 6px; overflow: hidden; border: 1px solid #38bdf8;">
-            <div style="width: {percent}%; height: 100%; background: linear-gradient(90deg, {color_hex}, #ffffff); border-radius: 6px;"></div>
+            <div style="width: {visual_width}%; height: 100%; background: linear-gradient(90deg, {color_hex}, #ffffff); border-radius: 6px;"></div>
         </div>
         <br>
     </div>'''
@@ -161,7 +171,6 @@ with open("README.md", "w") as f:
     f.write('<div align="center">\n')
     f.write('<h2>🕒 Recent Submissions</h2>\n')
     
-    # Slightly transparent table wrapper
     f.write('<div style="background: rgba(30, 41, 59, 0.5); padding: 20px; border-radius: 12px; border: 1px solid #38bdf8; width: 100%; max-width: 700px; margin: 0 auto;">\n')
     f.write('| # | Problem | Difficulty | Language |\n')
     f.write('|:---:|---------|:----------:|:--------:|\n')
@@ -171,30 +180,35 @@ with open("README.md", "w") as f:
             diff_emoji = {"Easy": "🟢", "Medium": "🟡", "Hard": "🔴"}.get(p["difficulty"], "⚪")
             f.write(f'| {idx} | <a href="{p["link"]}" style="color: #38bdf8; text-decoration: none;">{p["title"]}</a> | {diff_emoji} {p["difficulty"]} | <code>{p["lang"]}</code> |\n')
     else:
-        f.write('| 1 | _No recent submissions_ | - | - |\n')
+        f.write('| 1 | <i>No recent submissions yet</i> | - | - |\n')
 
     f.write('</div>\n')
     f.write('</div>\n\n')
 
     # ---------------------------
-    # Recent Analytics (Pill Badges)
+    # Recent Analytics (FIX: HIDDEN IF EMPTY)
     # ---------------------------
-    f.write('<div align="center">\n')
-    f.write('<h2>🧠 Recent Analytics</h2>\n')
+    # Only draw this section if the user actually has recent submissions
+    if recent_problems:
+        f.write('<div align="center">\n')
+        f.write('<h2>🧠 Recent Analytics</h2>\n')
+        
+        lang_badges = " ".join([f'<img src="https://img.shields.io/badge/{lang}-{count}_solve{"s" if count > 1 else ""}-blue?style=flat-square" />' for lang, count in lang_counts.items()])
+        diff_badges = " ".join([f'<img src="https://img.shields.io/badge/{diff}-{count}_solve{"s" if count > 1 else ""}-{color}?style=flat-square" />' for diff, count, color in [("Easy", diff_counts.get("Easy",0), "success"), ("Medium", diff_counts.get("Medium",0), "yellow"), ("Hard", diff_counts.get("Hard",0), "critical")] if count > 0])
+
+        f.write(f'{lang_badges}  \n\n')
+        f.write(f'{diff_badges}\n')
+        f.write('</div>\n\n')
+
+    # ---------------------------
+    # Footer (FIXED 2026 DATE BUG)
+    # ---------------------------
+    # FIX: Explicitly format as Year-Month-Day to prevent system clock bugs
+    current_time = datetime.datetime.utcnow().strftime("%b %d, %Y at %H:%M UTC")
     
-    lang_badges = " ".join([f'<img src="https://img.shields.io/badge/{lang}-{count}_solve{"s" if count > 1 else ""}-blue?style=flat-square" />' for lang, count in lang_counts.items()])
-    diff_badges = " ".join([f'<img src="https://img.shields.io/badge/{diff}-{count}_solve{"s" if count > 1 else ""}-{color}?style=flat-square" />' for diff, count, color in [("Easy", diff_counts.get("Easy",0), "success"), ("Medium", diff_counts.get("Medium",0), "yellow"), ("Hard", diff_counts.get("Hard",0), "critical")] if count > 0])
-
-    f.write(f'{lang_badges}  \n\n')
-    f.write(f'{diff_badges}\n')
-    f.write('</div>\n\n')
-
-    # ---------------------------
-    # Footer
-    # ---------------------------
     f.write('<div align="center">\n')
     f.write('<hr style="border-color: #38bdf8; width: 50%; border-width: 2px;">\n')
-    f.write(f'<i style="color: #8b949e;">⏱ Auto-updated: {datetime.datetime.now().strftime("%b %d, %Y at %H:%M UTC")} | Built with ❤️ by <a href="https://github.com/{GITHUB}" style="color: #70a5fd;">{GITHUB}</a></i>\n')
+    f.write(f'<i style="color: #8b949e;">⏱ Auto-updated: {current_time} | Built with ❤️ by <a href="https://github.com/{GITHUB}" style="color: #70a5fd;">{GITHUB}</a></i>\n')
     f.write('</div>\n')
 
 print("✅ Ultra-attractive README.md generated successfully!")
