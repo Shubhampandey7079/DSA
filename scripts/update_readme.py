@@ -5,7 +5,7 @@ USERNAME = "8AdxLDYG0y"
 GITHUB = "Shubhampandey7079"
 
 # -------------------------------
-# 1. BASIC STATS
+# 1. FETCH STATS
 # -------------------------------
 stats_url = f"https://leetcode-api-faisalshohag.vercel.app/{USERNAME}"
 
@@ -22,7 +22,7 @@ hard = stats.get("hardSolved", 0)
 ranking = stats.get("ranking", "N/A")
 
 # -------------------------------
-# 2. RECENT SUBMISSIONS
+# 2. FETCH RECENT SUBMISSIONS
 # -------------------------------
 recent_url = "https://leetcode.com/graphql"
 
@@ -64,92 +64,45 @@ except:
     recent_problems = []
 
 # -------------------------------
-# 3. ANALYTICS
+# 3. SAFE PROGRESS BAR (TEXT BASED)
 # -------------------------------
-lang_counts = {}
-diff_counts = {"Easy": 0, "Medium": 0, "Hard": 0}
-
-for p in recent_problems:
-    lang_counts[p["lang"]] = lang_counts.get(p["lang"], 0) + 1
-    diff_counts[p["difficulty"]] += 1
-
-# -------------------------------
-# 4. HELPERS (GITHUB SAFE)
-# -------------------------------
-def get_dynamic_badge(solved, goal, label):
-    percent = round((solved / goal) * 100, 1) if goal > 0 else 0
-
-    if percent < 25:
-        color = "red"
-    elif percent < 50:
-        color = "yellow"
-    elif percent < 75:
-        color = "green"
-    else:
-        color = "brightgreen"
-
-    return f'<img src="https://img.shields.io/badge/{label}-{solved}/{goal} ({percent}%)-{color}?style=for-the-badge&logo=leetcode" />'
-
-
-def get_skill_bar(solved, goal):
-    percent = round((solved / goal) * 100, 1) if goal > 0 else 0
-
-    filled = int(percent // 10)
-    empty = 10 - filled
-
-    bar = "🟩" * filled + "⬜" * empty
-
-    return f"""
-<div align="center">
-<b>{percent}%</b><br>
-{bar}
-</div><br>
-"""
+def progress_bar(value, total):
+    percent = int((value / total) * 100) if total > 0 else 0
+    filled = int(percent / 10)
+    bar = "█" * filled + "░" * (10 - filled)
+    return f"{percent}% [{bar}]"
 
 # -------------------------------
-# 5. WRITE README
+# 4. GENERATE README
 # -------------------------------
 with open("README.md", "w", encoding="utf-8") as f:
 
     # HEADER
-    f.write('<div align="center">\n')
-    f.write(f'<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=70A5FD&center=true&vCenter=true&width=600&lines=🚀+LeetCode+Dashboard;Solved+{total}+Problems;Ranking:+{ranking}" />\n')
-    f.write('</div>\n\n')
+    f.write(f"# 🚀 LeetCode Dashboard\n\n")
+    f.write(f"👤 Username: **{USERNAME}**\n\n")
+    f.write(f"🏆 Total Solved: **{total}**\n\n")
+    f.write(f"📊 Ranking: **{ranking}**\n\n")
 
-    # TARGET
-    f.write('## 🎯 Target Progress\n\n')
-    f.write('<div align="center">\n')
-    f.write(get_dynamic_badge(easy, 200, "Easy") + "<br><br>\n")
-    f.write(get_dynamic_badge(medium, 500, "Medium") + "<br><br>\n")
-    f.write(get_dynamic_badge(hard, 150, "Hard") + "\n")
-    f.write('</div>\n\n')
-
-    # BARS
-    f.write(get_skill_bar(easy, 200))
-    f.write(get_skill_bar(medium, 500))
-    f.write(get_skill_bar(hard, 150))
+    # PROGRESS
+    f.write("## 🎯 Progress\n\n")
+    f.write(f"Easy   : {progress_bar(easy, 200)} ({easy}/200)\n\n")
+    f.write(f"Medium : {progress_bar(medium, 500)} ({medium}/500)\n\n")
+    f.write(f"Hard   : {progress_bar(hard, 150)} ({hard}/150)\n\n")
 
     # LEETCODE CARD
-    f.write('<div align="center">\n')
-    f.write(f'<img src="https://leetcard.jacoblin.cool/{USERNAME}?theme=dark&ext=heatmap" />\n')
-    f.write('</div>\n\n')
+    f.write("## 📈 LeetCode Stats\n\n")
+    f.write(f"![LeetCode Stats](https://leetcard.jacoblin.cool/{USERNAME}?theme=dark&ext=heatmap)\n\n")
 
     # GITHUB STATS
-    f.write('## 🔥 GitHub Vibe Check\n\n')
-    f.write('<p align="center">\n')
-    f.write(f'<img src="https://github-readme-stats.vercel.app/api?username={GITHUB}&show_icons=true&theme=tokyonight" height="180"/>\n')
-    f.write(f'<img src="https://github-readme-stats.vercel.app/api/top-langs/?username={GITHUB}&layout=compact&theme=tokyonight" height="180"/>\n')
-    f.write('</p>\n\n')
-
-    # STREAK
-    f.write('<p align="center">\n')
-    f.write(f'<img src="https://streak-stats.demolab.com?user={GITHUB}&theme=tokyonight" />\n')
-    f.write('</p>\n\n')
+    f.write("## 🔥 GitHub Stats\n\n")
+    f.write(f"![GitHub Stats](https://github-readme-stats.vercel.app/api?username={GITHUB}&show_icons=true&theme=tokyonight)\n\n")
+    f.write(f"![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username={GITHUB}&layout=compact&theme=tokyonight)\n\n")
+    f.write(f"![Streak](https://streak-stats.demolab.com?user={GITHUB}&theme=tokyonight)\n\n")
 
     # RECENT SUBMISSIONS
-    f.write('## 🕒 Recent Submissions\n\n')
-    f.write('| # | Problem | Difficulty | Language |\n')
-    f.write('|---|---------|------------|----------|\n')
+    f.write("## 🕒 Recent Submissions\n\n")
+    f.write("| # | Problem | Difficulty | Language |\n")
+    f.write("|---|---------|------------|----------|\n")
 
     if recent_problems:
         for i, p in enumerate(recent_problems, 1):
@@ -157,17 +110,8 @@ with open("README.md", "w", encoding="utf-8") as f:
     else:
         f.write("| 1 | No recent submissions | - | - |\n")
 
-    # ANALYTICS
-    if recent_problems:
-        f.write('\n## 🧠 Recent Analytics\n\n')
-        for lang, count in lang_counts.items():
-            f.write(f"- {lang}: {count}\n")
-        for diff, count in diff_counts.items():
-            if count > 0:
-                f.write(f"- {diff}: {count}\n")
-
     # FOOTER
     now = datetime.datetime.utcnow().strftime("%b %d, %Y %H:%M UTC")
-    f.write(f"\n\n---\n⏱ Updated: {now}\n")
+    f.write(f"\n---\n⏱ Updated: {now}\n")
 
 print("✅ README generated successfully!")
