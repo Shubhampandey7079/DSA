@@ -6,19 +6,6 @@
 <a href="https://leetcode.com/8AdxLDYG0y/"><img src="https://img.shields.io/badge/LeetCode-6_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a> <a href="https://github.com/Shubhampandey7079"><img src="https://img.shields.io/badge/GitHub-Shubham_Pandey-181717?style=for-the-badge&logo=github&logoColor=white"/></a> <img src="https://img.shields.io/badge/Ranking-#5000001-2196F3?style=for-the-badge&logo=serverfault&logoColor=white"/>
 </div>
 
-> ### 🧑‍💻 About Me
-> - 🚀 Transforming lines of code into intelligent AI solutions.
-> - 🧠 Deep-diving into **Machine Learning** & **Data Structures**.
-> - 🎯 Target: SDE / AI Engineer at Top Product-Based Companies.
-> - ⚡ I don't count the days, I make the days count.
-
-### ⚙️ Tech Arsenal
-
-<div align="center">
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"/> <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/><br><br>
-<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/> <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white"/> <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/> <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
-</div>
-
 ### 📊 DSA Progress Tracker
 
 | Difficulty | Progress | Count |
@@ -66,5 +53,5 @@
 
 <div align="center">
 ---
-<sub>✨ Profile last synced on: <b>Apr 12, 2026 18:20 UTC</b></sub>
+<sub>✨ Profile last synced on: <b>Apr 12, 2026 18:31 UTC</b></sub>
 </div>
