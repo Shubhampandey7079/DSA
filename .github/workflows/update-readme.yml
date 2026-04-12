@@ -2,7 +2,9 @@ name: 🚀 Ultra Pro README
 
 on:
   schedule:
+    # Runs every 6 hours
     - cron: "0 */6 * * *"
+  workflow_dispatch: # Allows manual triggering from GitHub UI
   push:
     branches: ["main"]
 
@@ -20,18 +22,17 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.x"
+          python-version: "3.11" # Pinned to a specific version for consistency
+          cache: 'pip' # ⚡ Speeds up workflow by caching installed packages
 
       - name: Install deps
-        run: pip install requests
+        run: pip install -r requirements.txt # ⚡ Best practice: use a requirements file
 
       - name: Run script
         run: python scripts/update_readme.py
 
       - name: Commit & Push
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add README.md
-          git commit -m "🚀 Ultra update" || echo "No changes"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5 # ⚡ Industry standard for auto-committing
+        with:
+          commit_message: "🚀 Ultra update [skip ci]"
+          file_pattern: README.md
