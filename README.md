@@ -5,11 +5,11 @@
 </div>
 
 <div align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=2500&pause=1000&color=00F7FF&center=true&vCenter=true&random=false&width=900&lines=Hi+%F0%9F%91%8B+I%27m+Shubham+Pandey;Aspiring+AI+Engineer+%F0%9F%A4%96;DSA+Grinder+%7C+%F0%9F%94%A5+Problems+Solved%3A+7;Consistency+is+the+Key+%E2%9A%A1" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=2500&pause=1000&color=00F7FF&center=true&vCenter=true&random=false&width=900&lines=Hi+%F0%9F%91%8B+I%27m+Shubham+Pandey;Aspiring+AI+Engineer+%F0%9F%A4%96;DSA+Grinder+%7C+%F0%9F%94%A5+Problems+Solved%3A+8;Consistency+is+the+Key+%E2%9A%A1" alt="Typing SVG" /></a>
 </div>
 
 <div align="center">
-<a href="https://leetcode.com/8AdxLDYG0y/"><img src="https://img.shields.io/badge/LeetCode-7_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a> <a href="https://github.com/Shubhampandey7079"><img src="https://img.shields.io/badge/GitHub-Shubham_Pandey-181717?style=for-the-badge&logo=github&logoColor=white"/></a> <a href="mailto:Shubhampandey707906@gmail.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a> <a href="https://linkedin.com/in/shubhampandey7079"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://leetcode.com/8AdxLDYG0y/"><img src="https://img.shields.io/badge/LeetCode-8_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a> <a href="https://github.com/Shubhampandey7079"><img src="https://img.shields.io/badge/GitHub-Shubham_Pandey-181717?style=for-the-badge&logo=github&logoColor=white"/></a> <a href="mailto:Shubhampandey707906@gmail.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a> <a href="https://linkedin.com/in/shubhampandey7079"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 </div>
 
 <div align="center">
@@ -42,7 +42,7 @@
     <tr>
       <td align="center"><img src="https://img.shields.io/badge/🟢_Easy-2ECC71?style=flat-square"/></td>
       <td align="center">![3%](https://progress-bar.dev/3/?width=400&color=2ECC71)</td>
-      <td align="center"><code>6/200</code></td>
+      <td align="center"><code>7/200</code></td>
     </tr>
     <tr>
       <td align="center"><img src="https://img.shields.io/badge/🟡_Medium-F1C40F?style=flat-square"/></td>
@@ -170,6 +170,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:C084FC&1:7B2FFF&2:00F7FF&height=120&section=footer" width="100%"/>
 
-<sub>✨ Profile last synced on: <b>May 02, 2026 09:29 UTC</b></sub>
+<sub>✨ Profile last synced on: <b>May 02, 2026 09:40 UTC</b></sub>
 
 </div>
