@@ -1,30 +1,3 @@
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F7FF&1:7B2FFF&2:C084FC&height=180&section=header&text=Shubham%20Pandey&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Aspiring%20AI%20Engineer%20%7C%20DSA%20Grinder%20%7C%20Full%20Stack%20Developer&descSize=18&descAlignY=55" width="100%" />
-
-</div>
-
-<div align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=2500&pause=1000&color=00F7FF&center=true&vCenter=true&random=false&width=900&lines=Hi+%F0%9F%91%8B+I%27m+Shubham+Pandey;Aspiring+AI+Engineer+%F0%9F%A4%96;DSA+Grinder+%7C+%F0%9F%94%A5+Problems+Solved%3A+10;Consistency+is+the+Key+%E2%9A%A1" alt="Typing SVG" /></a>
-</div>
-
-<div align="center">
-<a href="https://leetcode.com/8AdxLDYG0y/"><img src="https://img.shields.io/badge/LeetCode-10_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a> <a href="https://github.com/Shubhampandey7079"><img src="https://img.shields.io/badge/GitHub-Shubham_Pandey-181717?style=for-the-badge&logo=github&logoColor=white"/></a> <a href="mailto:Shubhampandey707906@gmail.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a> <a href="https://linkedin.com/in/shubhampandey7079"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-</div>
-
-<div align="center">
-
-<table>
-  <tr>
-    <td><img src="https://img.shields.io/badge/Ranking-#5000001-00F7FF?style=for-the-badge&logo=serverfault&logoColor=white"/></td>
-    <td><img src="https://img.shields.io/badge/Streak-0_Days-FF6B6B?style=for-the-badge&logo=fire&logoColor=white"/></td>
-    <td><img src="https://img.shields.io/badge/Acceptance-N/A%-C084FC?style=for-the-badge&logo=check-circle&logoColor=white"/></td>
-    <td><img src="https://img.shields.io/badge/Contributions-0-2ECC71?style=for-the-badge&logo=codeforces&logoColor=white"/></td>
-  </tr>
-</table>
-
-</div>
-
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 <div align="center">
@@ -170,6 +143,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:C084FC&1:7B2FFF&2:00F7FF&height=120&section=footer" width="100%"/>
 
-<sub>✨ Profile last synced on: <b>May 16, 2026 02:58 UTC</b></sub>
+<sub>✨ Profile last synced on: <b>May 16, 2026 07:46 UTC</b></sub>
 
 </div>
