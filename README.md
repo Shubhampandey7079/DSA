@@ -14,13 +14,13 @@
   <tbody>
     <tr>
       <td align="center"><img src="https://img.shields.io/badge/🟢_Easy-2ECC71?style=flat-square"/></td>
-      <td align="center">![4%](https://progress-bar.dev/4/?width=400&color=2ECC71)</td>
-      <td align="center"><code>9/200</code></td>
+      <td align="center">![0%](https://progress-bar.dev/0/?width=400&color=2ECC71)</td>
+      <td align="center"><code>0/200</code></td>
     </tr>
     <tr>
       <td align="center"><img src="https://img.shields.io/badge/🟡_Medium-F1C40F?style=flat-square"/></td>
       <td align="center">![0%](https://progress-bar.dev/0/?width=400&color=F1C40F)</td>
-      <td align="center"><code>2/500</code></td>
+      <td align="center"><code>0/500</code></td>
     </tr>
     <tr>
       <td align="center"><img src="https://img.shields.io/badge/🔴_Hard-E74C3C?style=flat-square"/></td>
@@ -143,6 +143,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:C084FC&1:7B2FFF&2:00F7FF&height=120&section=footer" width="100%"/>
 
-<sub>✨ Profile last synced on: <b>May 19, 2026 19:53 UTC</b></sub>
+<sub>✨ Profile last synced on: <b>May 20, 2026 03:39 UTC</b></sub>
 
 </div>
