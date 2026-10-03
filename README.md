@@ -25,7 +25,7 @@
     <tr>
       <td align="center"><img src="https://img.shields.io/badge/🔴_Hard-E74C3C?style=flat-square"/></td>
       <td align="center">![0%](https://progress-bar.dev/0/?width=400&color=E74C3C)</td>
-      <td align="center"><code>0/150</code></td>
+      <td align="center"><code>1/150</code></td>
     </tr>
   </tbody>
 </table>
@@ -143,6 +143,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:C084FC&1:7B2FFF&2:00F7FF&height=120&section=footer" width="100%"/>
 
-<sub>✨ Profile last synced on: <b>Oct 03, 2026 15:49 UTC</b></sub>
+<sub>✨ Profile last synced on: <b>Oct 03, 2026 20:40 UTC</b></sub>
 
 </div>
